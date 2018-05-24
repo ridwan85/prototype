@@ -1,0 +1,105 @@
+<!--
+  Generated template for the EventDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header no-border>
+
+    
+  
+  </ion-header> -->
+<div class="menu-container">
+
+  <button style="background-color:transparent; box-shadow: 0px 0px;" ion-button (click)="goBack()" tappable>
+    <ion-icon style="color:white;font-size:1.7em;" name="arrow-back"></ion-icon>
+  </button>
+  <!-- <button style="background-color:transparent; float:right; box-shadow: 0px 0px;" ion-button (click)="toggleRightMenu()">
+    <ion-icon style="color:white;font-size:1.7em;" name="settings"></ion-icon>
+  </button> -->
+</div>
+
+<ion-content>
+
+  <div class="event-cover center" [style.backgroundImage]="'url('+ eventDetail.image +')'">
+    <div class="overlay" [ngStyle]="setMyStyles(eventDetail.firstColor, eventDetail.secondColor)"></div>
+    <h3 class="event-title">{{eventDetail.title}}</h3>
+  </div>
+  <div class="center">
+    <h3 [ngStyle]="setFontColor(eventDetail.secondColor)">Services</h3>
+  </div>
+
+  <div class="row">
+
+    <div class="col center" (click)="goToVendor('Photographer')">
+      <ion-icon 
+        [ngStyle]="setFontColor(eventDetail.secondColor)" 
+        style="font-size:4em;" 
+        name="appname-photo-camera">
+      </ion-icon>
+      <p [ngStyle]="setFontColor(eventDetail.firstColor)">Photographer</p>
+    </div>
+
+    <div class="col center" (click)="goToVendor('Videographer')">
+        <ion-icon 
+          [ngStyle]="setFontColor(eventDetail.secondColor)" 
+          style="font-size:4em;" 
+          name="appname-video-camera">
+        </ion-icon>
+        <p [ngStyle]="setFontColor(eventDetail.firstColor)">Videographer</p>
+      </div>
+
+      <div class="col center" (click)="goToVendor('Ice Cream')">
+          <ion-icon 
+            [ngStyle]="setFontColor(eventDetail.secondColor)" 
+            style="font-size:4em;" 
+            name="appname-ice-cream-truck">
+          </ion-icon>
+          <p [ngStyle]="setFontColor(eventDetail.firstColor)">Ice Cream</p>
+        </div>
+
+  </div>
+  <div class="row">
+
+      <div class="col center" (click)="goToVendor('Catering')">
+        <ion-icon 
+          [ngStyle]="setFontColor(eventDetail.secondColor)" 
+          style="font-size:4em;" 
+          name="appname-catering">
+        </ion-icon>
+        <p [ngStyle]="setFontColor(eventDetail.firstColor)">Catering</p>
+      </div>
+  
+      <div class="col center" (click)="goToVendor('Sketch')">
+          <ion-icon 
+            [ngStyle]="setFontColor(eventDetail.secondColor)" 
+            style="font-size:4em;" 
+            name="appname-sketch">
+          </ion-icon>
+          <p [ngStyle]="setFontColor(eventDetail.firstColor)">Sketch</p>
+        </div>
+  
+        <div class="col center" (click)="goToVendor('Dress')">
+            <ion-icon 
+              [ngStyle]="setFontColor(eventDetail.secondColor)" 
+              style="font-size:4em;" 
+              name="appname-dress">
+            </ion-icon>
+            <p [ngStyle]="setFontColor(eventDetail.firstColor)">Dress</p>
+          </div>
+  
+    </div>
+    <div class="row">
+
+        <div class="col center" (click)="goToVendor('Sound System')">
+          <ion-icon 
+            [ngStyle]="setFontColor(eventDetail.secondColor)" 
+            style="font-size:4em;" 
+            name="appname-musicplayer">
+          </ion-icon>
+          <p [ngStyle]="setFontColor(eventDetail.firstColor)">Sound System</p>
+        </div>
+
+    
+      </div>
+</ion-content>

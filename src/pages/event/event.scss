@@ -1,0 +1,38 @@
+page-event {
+    .user {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      
+        object-fit: cover;
+      }
+
+      .list-cover{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height:120px;
+        width:100%;
+        margin-bottom: -16px;
+        position:relative;
+      }
+
+      .overlay{
+        height: 120px;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        opacity: 0.7;
+      }
+
+      .list-title{
+        text-align: center;
+        vertical-align: middle;
+        line-height: 120px; 
+        color: white;
+        position:relative;
+        z-index: 2;
+      }
+}

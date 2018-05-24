@@ -14,3 +14,63 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: "Objective";
+    src: url("../assets/fonts/Objective-Regular.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  *{
+    font-family: "Objective";
+  }
+
+  .center {
+    margin:0 auto;
+    text-align: center;
+}
+
+.toolbar-background {
+  background: transparent !important;
+}
+
+ion-icon {
+  &[class*="appname-"] {
+      // Instead of using the font-based icons
+      // We're applying SVG masks
+      mask-size: contain;
+      mask-position: 50% 50%;
+      mask-repeat: no-repeat;
+      background: currentColor;
+      width: 1em;
+      height: 1em;
+  }
+  // custom icons
+  &[class*="appname-foodstall"] {
+    mask-image: url(../assets/icon/food-stall.svg);
+}
+&[class*="appname-dress"] {
+    mask-image: url(../assets/icon/dress.svg);
+}
+&[class*="appname-sketch"] {
+  mask-image: url(../assets/icon/sketch.svg);
+}
+&[class*="appname-musicplayer"] {
+  mask-image: url(../assets/icon/music-player.svg);
+}
+&[class*="appname-catering"] {
+  mask-image: url(../assets/icon/catering.svg);
+}
+&[class*="appname-ice-cream-truck"] {
+  mask-image: url(../assets/icon/ice-cream-truck.svg);
+}
+&[class*="appname-photo-camera"] {
+  mask-image: url(../assets/icon/photo-camera.svg);
+}
+&[class*="appname-video-camera"] {
+  mask-image: url(../assets/icon/camera.svg);
+}
+}
+
+
